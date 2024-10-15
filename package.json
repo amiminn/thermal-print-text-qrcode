@@ -1,0 +1,23 @@
+{
+  "name": "@amiminn/print-thermal",
+  "version": "1.0.0",
+  "description": "package print thermal for ionic capacitor",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amiminn/thermal-print-text-qrcode.git"
+  },
+  "keywords": [
+    "thermal-print"
+  ],
+  "author": "amiminn",
+  "license": "ISC",
+  "types": "./dist/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/amiminn/thermal-print-text-qrcode/issues"
+  },
+  "homepage": "https://github.com/amiminn/thermal-print-text-qrcode#readme"
+}
