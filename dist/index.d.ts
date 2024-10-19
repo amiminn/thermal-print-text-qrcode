@@ -1,3 +1,8 @@
+interface printerSettingsType {
+    dots?: number;
+    lineSpacing?: number;
+}
+export declare function printerSettings(settings?: printerSettingsType): string;
 export declare function dotPrint(dots?: number): string;
 export declare function enterLine(): string;
 export declare function sLine(): string;

@@ -1,3 +1,20 @@
+interface printerSettingsType {
+  dots?: number;
+  lineSpacing?: number;
+}
+
+export function printerSettings(
+  settings: printerSettingsType = {
+    dots: 8,
+    lineSpacing: 30,
+  }
+) {
+  let commands = "";
+  commands += "\x1b\x33" + String.fromCharCode(settings.dots);
+  commands += "\x1b\x33" + String.fromCharCode(settings.lineSpacing);
+  return commands;
+}
+
 export function dotPrint(dots: number = 8) {
   let commands = "";
   commands += "\x1b\x33" + String.fromCharCode(dots);
