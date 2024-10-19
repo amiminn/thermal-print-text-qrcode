@@ -16,6 +16,22 @@ export function dLine() {
   return "================================\n";
 }
 
+export function lineRight() {
+  let commands = "";
+  commands += "\x1b\x61\x02";
+  commands += `----------------\n`;
+  commands += "\x1b\x61\x00";
+  return commands;
+}
+
+export function lineLeft() {
+  let commands = "";
+  commands += "\x1b\x61\x00";
+  commands += `----------------\n`;
+  commands += "\x1b\x61\x00";
+  return commands;
+}
+
 export function textCenter(text: string): string {
   let commands = "";
   commands += "\x1b\x61\x01";
