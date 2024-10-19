@@ -1,6 +1,6 @@
-export function dotPrint() {
+export function dotPrint(dots: number = 8) {
   let commands = "";
-  commands += "\x1b\x33\x08";
+  commands += "\x1b\x33" + String.fromCharCode(dots);
   return commands;
 }
 

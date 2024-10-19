@@ -1,4 +1,4 @@
-export declare function dotPrint(): string;
+export declare function dotPrint(dots?: number): string;
 export declare function enterLine(): string;
 export declare function sLine(): string;
 export declare function dLine(): string;
