@@ -14,12 +14,12 @@ npm i @amiminn/print-thermal
 ## example
 
 ```jsx
-
 import { BluetoothPrinter } from "@kduma-autoid/capacitor-bluetooth-printer";
 import {
   dotPrint,
   enterLine,
-  headLine,
+  sLine,
+  dLine,
   QRCode,
   textCenter,
 } from "@amiminn/print-thermal";
@@ -27,9 +27,10 @@ import {
 function contextPrint() {
   let text = "";
   text += dotPrint();
-  text += headLine();
   text += enterLine();
+  text += sLine();
   text += textCenter("thermalPrint @amiminn");
+  text += dLine();
   text += enterLine();
   text += QRCode({ text: "https://amiminn.my.id" });
   text += enterLine();
@@ -39,7 +40,7 @@ function contextPrint() {
 
 const printerCommands = contextPrint();
 
-await BluetoothPrinter.print{
+await BluetoothPrinter.print({
   data: printerCommands,
 });
 ```

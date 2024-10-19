@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.QRCode = exports.textRight = exports.textLeft = exports.textCenter = exports.headLine = exports.enterLine = exports.dotPrint = void 0;
+exports.QRCode = exports.textRight = exports.textLeft = exports.textCenter = exports.dLine = exports.sLine = exports.enterLine = exports.dotPrint = void 0;
 function dotPrint() {
     var commands = "";
     commands += "\x1b\x33\x08";
@@ -11,10 +11,14 @@ function enterLine() {
     return "\n";
 }
 exports.enterLine = enterLine;
-function headLine() {
+function sLine() {
     return "--------------------------------\n";
 }
-exports.headLine = headLine;
+exports.sLine = sLine;
+function dLine() {
+    return "================================\n";
+}
+exports.dLine = dLine;
 function textCenter(text) {
     var commands = "";
     commands += "\x1b\x61\x01";

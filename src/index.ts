@@ -8,8 +8,12 @@ export function enterLine() {
   return "\n";
 }
 
-export function headLine() {
+export function sLine() {
   return "--------------------------------\n";
+}
+
+export function dLine() {
+  return "================================\n";
 }
 
 export function textCenter(text: string): string {
