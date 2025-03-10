@@ -11,26 +11,53 @@ Capacitor print-thermal dengan library dukungan dari
 npm i @amiminn/print-thermal
 ```
 
+## Usage
+
+Import and use the functions as needed:
+```bash
+import { printerSettings, enterLine, sLine, dLine, lineRight, lineLeft, textCenter, textLeft, textRight, QRCode } from "@amiminn/print-thermal";
+```
+Configure Printer Settings
+```bash
+const commands = printerSettings({ dots: 8, lineSpacing: 30 });
+console.log(commands);
+```
+Print New Line
+```bash
+console.log(enterLine());
+```
+Print Single and Double Lines
+```bash
+console.log(sLine());
+console.log(dLine());
+```
+Align Text
+```bash
+console.log(textCenter("Centered Text"));
+console.log(textLeft("Left Aligned Text"));
+console.log(textRight("Right Aligned Text"));
+```
+Print QR Code
+```bash
+const qrCodeCommand = QRCode({ text: "https://example.com", model: 2, size: 5 });
+console.log(qrCodeCommand);
+```
 ## example
 
 ```jsx
 import { BluetoothPrinter } from "@kduma-autoid/capacitor-bluetooth-printer";
 import {
-  dotPrint,
   enterLine,
-  sLine,
-  dLine,
+  printerSettings,
   QRCode,
   textCenter,
 } from "@amiminn/print-thermal";
 
 function contextPrint() {
   let text = "";
-  text += dotPrint();
+  text += printerSettings();
   text += enterLine();
-  text += sLine();
   text += textCenter("thermalPrint @amiminn");
-  text += dLine();
   text += enterLine();
   text += QRCode({ text: "https://amiminn.my.id" });
   text += enterLine();
@@ -40,8 +67,9 @@ function contextPrint() {
 
 const printerCommands = contextPrint();
 
-await BluetoothPrinter.print({
-  data: printerCommands,
+await BluetoothPrinter.connectAndPrint({
+   data: printerCommands,
+   address: "66:32:01:0F:7C:4C",
 });
 ```
 
