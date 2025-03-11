@@ -2,6 +2,8 @@
 
 Print thermal library
 
+Hasil Sample Build : [Download APK file](https://github.com/amiminn/thermal-print-text-qrcode/raw/refs/heads/main/Sample%20Thermal%20Print.apk)
+
 ## Installation
 
 Capacitor print-thermal dengan library dukungan dari
