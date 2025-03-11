@@ -1,6 +1,6 @@
 {
   "name": "@amiminn/print-thermal",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "package print thermal for ionic capacitor",
   "main": "dist/index.js",
   "scripts": {
