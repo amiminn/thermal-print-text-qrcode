@@ -2,7 +2,7 @@
 
 Print thermal library
 
-Hasil Sample Build : [Download APK file](https://github.com/amiminn/thermal-print-text-qrcode/raw/refs/heads/main/Sample%20Thermal%20Print.apk)
+Hasil Sample Build : [Download APK file](https://github.com/amiminn/thermal-print-text-qrcode/releases/download/%23thermalprint/Sample.Thermal.Print.apk)
 
 ## Installation
 
